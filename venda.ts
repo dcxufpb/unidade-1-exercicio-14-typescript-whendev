@@ -11,19 +11,19 @@ export class Venda {
 
   public validar_campos_obrigatorios(): void{
     if (this.isNullOrEmpty(this.ccf)) {
-        throw new Error(`O campo ccf da venda é obrigatório`);
+      throw new Error(`O campo ccf da venda é obrigatório`);
     }
     
     if (this.isNullOrEmpty(this.coo)) {
-        throw new Error(`O campo coo da venda é obrigatório`);
+      throw new Error(`O campo coo da venda é obrigatório`);
     }
 
     if (this.isNullOrEmpty(this.datahora)) {
-        throw new Error(`O campo data da venda é obrigatório`);
+      throw new Error(`O campo data da venda é obrigatório`);
     }
 
     if (this.itens.length <= 0) {
-        throw new Error(`Voce precisa adicionar itens a sua venda`);
+      throw new Error(`Voce precisa adicionar itens a sua venda`);
     }
   }
 

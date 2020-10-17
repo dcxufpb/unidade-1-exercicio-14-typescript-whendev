@@ -99,3 +99,12 @@ test('Venda_valor_unitazio_zero', () => {
   let venda = loja.vender(DATAHORA, CCF, COO);
   verificaCampoObrigatorio("item não pode ser adicionado na venda com produto nesse estado", venda, 3, produto4, 3)
 });
+
+test('Venda', () => {
+  let venda = loja.vender(DATAHORA, CCF, COO);
+  try {
+    venda.imprimeCupom()
+  } catch (e) {
+    expect(e.message).toBe("Voce precisa adicionar itens a sua venda");
+  }
+});
